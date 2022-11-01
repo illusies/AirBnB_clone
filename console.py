@@ -14,8 +14,15 @@ from models.review import Review
 from shlex import split
 
 # A global list that specifies the menu of the command interpreter
-CLASSES = ["BaseModel","User","City","Place","State","Amenity","Review"]
-
+CLASSES=[
+    "BaseModel",
+    "User",
+    "City",
+    "Place",
+    "State",
+    "Amenity",
+    "Review"
+    ]
 
 def parse(arg):
     """ A function that parses the command
