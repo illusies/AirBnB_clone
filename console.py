@@ -14,12 +14,21 @@ from models.review import Review
 from shlex import split
 
 # A global list that specifies the menu of the command interpreter
-CLASSES = [ "BaseModel", "User", "City", "Place", "State", "Amenity", "Review" ]
+CLASSES = [
+        "BaseModel", 
+        "User", 
+        "City", 
+        "Place", 
+        "State", 
+        "Amenity", 
+        "Review"
+        ]
+
 
 def parse(arg):
-    """A function that parses the command
-     
-		PARAMETERS
+    """ A function that parses the command
+        
+        PARAMETERS
             arg: string containing commands
     """
     
@@ -39,6 +48,7 @@ def parse(arg):
         retl.append(curly_braces.group())
         return retl
 
+
 def is_missing(args):
     """A function that checks if the class name is missing or doesn't exist
      
@@ -54,6 +64,7 @@ def is_missing(args):
         print("** class doesn't exist **")
     else:
         return arg_list
+
 
 class HBNBCommand(cmd.Cmd):
     """A class that defines the command interpreter"""
@@ -244,6 +255,7 @@ class HBNBCommand(cmd.Cmd):
             if arg1[0] == type(obj).__name__:
                 count += 1
         print(count)
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
