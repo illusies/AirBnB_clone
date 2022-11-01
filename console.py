@@ -4,6 +4,7 @@
 import cmd
 import re
 import models
+
 from models.base_model import BaseModel
 from models.user import User
 from models.city import City
@@ -87,7 +88,7 @@ class HBNBCommand(cmd.Cmd):
                 arg: string containing commands
         """
         
-        action_m0ap = {
+        action_map = {
             "all": self.do_all,
             "show": self.do_show,
             "destroy": self.do_destroy,
@@ -262,3 +263,4 @@ class HBNBCommand(cmd.Cmd):
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
+    
