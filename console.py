@@ -112,7 +112,7 @@ class HBNBCommand(cmd.Cmd):
     def do_EOF(self, argv):
         """ A function that executes the EOF menu command to 
             exit the program
-                    
+            
             PARAMETERS
                 self: the constructor variable
                 argv: string containing commands
@@ -124,7 +124,7 @@ class HBNBCommand(cmd.Cmd):
     def do_quit(self, argv):
         """ A function that executes the Quit menu command to exit
             the program
-                    
+
             PARAMETERS
                 self: the constructor variable
                 argv: string containing commands
@@ -177,7 +177,7 @@ class HBNBCommand(cmd.Cmd):
                 self: the constructor variable
                 argv: string containing commands
         """
-        
+
         arg_list = split(argv)
         objects = self.storage.all().values()
         if not arg_list:
@@ -198,7 +198,7 @@ class HBNBCommand(cmd.Cmd):
                 self: the constructor variable
                 argv: string containing commands
         """
-        
+
         arg_list = is_missing(argv)
         if arg_list:
             if len(arg_list) == 1:
@@ -220,7 +220,7 @@ class HBNBCommand(cmd.Cmd):
                 self: the constructor variable
                 argv: string containing commands
         """
-        
+
         arg_list = is_missing(argv)
         if arg_list:
             if len(arg_list) == 1:
